@@ -2,11 +2,9 @@ package IntroToJUnitTest;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-
 /**
  * Uncomment each test and then write the method to make it pass.
  * **/
-
 public class MoreAndMoreTests {
 	String multiply(int a,int b) {
 		return (a+" x "+b+" = "+(a*b));
@@ -21,12 +19,13 @@ public class MoreAndMoreTests {
 
 	
 	
-	int isPrime(int a){
-		for (
-			int i = 2; i < a; i++) {
-			a/i;
+	boolean isPrime(int a){
+		for (int i = 2; i < a; i++) {
+			if(a%i==0){
+				return false;
+			}
 		}
-		return 1;
+		 return true;
 	}
 	@Test
 	  public void PrimeTest() {
@@ -37,35 +36,55 @@ public class MoreAndMoreTests {
 	    assertFalse(isPrime(4));
 	    assertFalse(isPrime(12));
 	    assertFalse(isPrime(527));
+	  }
+
+	
+	
+	boolean isSquare(int a) {
+		for (int i = 0; i <= a; i++) {
+			
+		if(Math.pow(a,.5)==i) {
+			return true;
+		}
+		}
+		return false;
+	}
+		
+	@Test
+	  public void SquareTest() {
+
+	    assertTrue(isSquare(4));
+	    assertTrue(isSquare(144));
+	    assertTrue(isSquare(64));
+	    assertTrue(isSquare(10201));
+	    assertTrue(isSquare(1));
+	    assertFalse(isSquare(3));
+	    assertFalse(isSquare(22));
+	    assertFalse(isSquare(143));
 
 	  }
 
-//	@Test
-//	  public void SquareTest() {
-//
-//	    assertTrue(isSquare(4));
-//	    assertTrue(isSquare(144));
-//	    assertTrue(isSquare(64));
-//	    assertTrue(isSquare(10201));
-//	    assertTrue(isSquare(1));
-//	    assertFalse(isSquare(3));
-//	    assertFalse(isSquare(22));
-//	    assertFalse(isSquare(143));
-//
-//	  }
-//
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	boolean isCube(int a) {
+		for (int i = 0; i <= a; i++) {
+			
+		if(a==i*i*i) {
+			return true;
+		}
+		}
+		return false;
+	}
+	@Test
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
 
 
 
