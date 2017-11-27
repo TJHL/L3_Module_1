@@ -41,5 +41,55 @@ public class Algorithms {
 		}
 		return b;
 	}
-	public static 
+	public static boolean containsSOS(List<String>message1) {
+		for (int i = 0; i < message1.size(); i++) {
+		if(message1.get(i).equals(" ... --- ... ")) {
+			return true;
+		}
+		}
+		return false;
+		
+	}
+	public static double sortScores(List<Double> results) {
+		for (int i = 0; i < results.size(); i++) {
+			for(int j = i+1;j<results.size();j++) {
+				if(results.get(i)>results.get(j)){
+					double temp = results.get(i);
+					results.set(i,results.get(j));
+					results.set(j, temp);
+				}
+			}
+
+		}
+		
+		return temp();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
