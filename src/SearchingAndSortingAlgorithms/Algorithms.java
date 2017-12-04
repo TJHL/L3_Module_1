@@ -30,6 +30,7 @@ public class Algorithms {
 		}
 		return a;
 	}
+	//4
 	public static String findLongestWord(List<String>words) {
 		int a=0;
 		String b="";
@@ -41,6 +42,7 @@ public class Algorithms {
 		}
 		return b;
 	}
+	//5/6
 	public static boolean containsSOS(List<String>message1) {
 		for (int i = 0; i < message1.size(); i++) {
 		if(message1.get(i).equals(" ... --- ... ")) {
@@ -50,23 +52,43 @@ public class Algorithms {
 		return false;
 		
 	}
-	public static double sortScores(List<Double> results) {
+	//7. Sorting exam scores
+	public static List<Double> sortScores(List<Double> results) {
+	
 		for (int i = 0; i < results.size(); i++) {
 			for(int j = i+1;j<results.size();j++) {
 				if(results.get(i)>results.get(j)){
 					double temp = results.get(i);
 					results.set(i,results.get(j));
 					results.set(j, temp);
+					
+					
 				}
 			}
 
 		}
 		
-		return temp();
+		return results;
 	}
-	
-	
-	
+	//8. DNA length Sorting
+	public static List<String> sortDNA(List<String> unsortedSequences) {
+		for (int i = 0; i < unsortedSequences.size(); i++) {
+			for(int j = i+1;j<unsortedSequences.size();j++) {
+				if(unsortedSequences.get(i).length()>unsortedSequences.get(j).length()){
+					String temp = unsortedSequences.get(i);
+					unsortedSequences.set(i,unsortedSequences.get(j));
+					unsortedSequences.set(j, temp);
+				}
+			}
+		}
+		return unsortedSequences;
+		}
+	//9.
+	public static List<String> sortWords(List<String> words) {
+		
+		
+	return words;	
+	}
 	
 	
 	
